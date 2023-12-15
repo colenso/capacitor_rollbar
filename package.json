@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-rollbar",
+  "name": "@colenso/capacitor-rollbar",
   "version": "0.0.9",
   "description": "This plugin will help to intergrate Rollbar with your capacitor project to log all the andorid events.",
   "main": "dist/plugin.cjs.js",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nishantonline1/capacitor_rollbar.git"
+    "url": "git+https://github.com/colenso/capacitor_rollbar.git"
   },
   "bugs": {
-    "url": "https://github.com/nishantonline1/capacitor_rollbar/issues"
+    "url": "https://github.com/colenso/capacitor_rollbar/issues"
   },
   "keywords": [
     "capacitor",
