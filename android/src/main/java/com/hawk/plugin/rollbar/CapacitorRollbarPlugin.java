@@ -1,5 +1,7 @@
 package com.hawk.plugin.rollbar;
 
+import android.provider.Settings;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -22,9 +24,9 @@ public class CapacitorRollbarPlugin extends Plugin {
         String environment = getConfig().getString("environment");
         Boolean includeLogCat = getConfig().getBoolean("includeLogcat", false);
         Rollbar.init(getContext(), accessToken, environment, true, includeLogCat);
-        String deviceBuildSerialNo = android.os.Build.SERIAL;
+        String uuid = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
         rollbar = Rollbar.instance();
-        rollbar.setPersonData(deviceBuildSerialNo, "", "");
+        rollbar.setPersonData(uuid, "", "");
     }
 
 
