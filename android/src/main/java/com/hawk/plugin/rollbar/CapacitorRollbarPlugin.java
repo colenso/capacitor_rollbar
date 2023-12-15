@@ -32,15 +32,15 @@ public class CapacitorRollbarPlugin extends Plugin {
 
     @PluginMethod
     public void setPersonData(PluginCall call) {
-        JSObject userData = call.getObject("userData");
-        if (userData != null) {
-            String userEmail = userData.getString("userEmail");
-            String userName = userData.getString("userName");
-            String deviceBuildSerialNo = android.os.Build.SERIAL;
-            rollbar.setPersonData(deviceBuildSerialNo, userEmail, userName);
+        JSObject personData = call.getObject("person");
+        if (personData != null) {
+            String userId = personData.getString("id");
+            String username = personData.getString("username");
+            String email = personData.getString("email");
+            rollbar.setPersonData(userId, email, username);
             call.resolve();
         }else{
-            call.reject("Invalid user data provided.");
+            call.reject("Invalid person data provided.");
         }
     }
 
