@@ -1,6 +1,6 @@
 {
   "name": "@colenso/capacitor-rollbar",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "This plugin will help to intergrate Rollbar with your capacitor project to log all the andorid events.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
